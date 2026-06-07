@@ -1,0 +1,19 @@
+{
+  "enabled": true,
+  "dist": "dist/ST-PanelReset/index.js",
+  "outputDirectory": "release",
+  "fileBaseName": "酒馆助手脚本-酒馆面板回正",
+  "remoteUrl": "https://testingcf.jsdelivr.net/gh/jiozhaoyue/ST-PanelReset@latest/dist/ST-PanelReset/index.js",
+  "script": {
+    "type": "script",
+    "enabled": true,
+    "baseName": "酒馆面板回正",
+    "id": "279082b9-8909-4f57-89cb-abb7775c9ec0",
+    "info": "代码仓库：https://github.com/jiozhaoyue/ST-PanelReset\nDiscord帖子：https://discord.com/channels/1134557553011998840/1512864628710051841",
+    "button": {
+      "enabled": true,
+      "buttons": []
+    },
+    "data": {}
+  }
+}
