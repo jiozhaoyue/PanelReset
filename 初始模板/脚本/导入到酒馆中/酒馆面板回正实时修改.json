@@ -1,0 +1,7 @@
+{
+  "id": "a33d4634-788a-4fb2-9bb6-ce054e8065d6",
+  "name": "酒馆面板回正实时修改",
+  "content": "import 'http://127.0.0.1:5500/ST-PanelReset/dist/ST-PanelReset/index.js'",
+  "info": "代码仓库：https://github.com/jiozhaoyue/ST-PanelReset\nDiscord帖子：https://discord.com/channels/1134557553011998840/1512864628710051841",
+  "buttons": []
+}
