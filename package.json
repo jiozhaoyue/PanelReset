@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "st-panel-reset",
   "version": "1.1.0",
   "scripts": {
@@ -9,6 +10,12 @@
     "watch": "webpack --mode development --watch --progress",
     "package:script": "node scripts/package-tavern-helper-script.mjs",
     "release:script": "pnpm build:js && pnpm package:script",
+=======
+  "scripts": {
+    "build:dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "watch": "webpack --mode development --watch --progress",
+>>>>>>> fdfcbc5386747889d0b011123d4dde6612c67d1b
     "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,css,scss,html,vue}\" --no-error-on-unmatched-pattern",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
