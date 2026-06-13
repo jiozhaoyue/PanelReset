@@ -1,8 +1,11 @@
 node_modules
 
+<<<<<<< HEAD
 .codex
 test
 
+=======
+>>>>>>> 953e75dbee8f57836eb5651fcf1275f064938d35
 .DS_Store
 Thumbs.db
 

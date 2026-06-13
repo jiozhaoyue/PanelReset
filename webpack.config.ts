@@ -19,9 +19,12 @@ import webpack from 'webpack';
 import WebpackObfuscator from 'webpack-obfuscator';
 const require = createRequire(import.meta.url);
 const HTMLInlineCSSWebpackPlugin = require('html-inline-css-webpack-plugin').default;
+<<<<<<< HEAD
 const package_json = JSON.parse(fs.readFileSync(path.join(import.meta.dirname, 'package.json'), 'utf-8')) as {
   name?: string;
 };
+=======
+>>>>>>> 953e75dbee8f57836eb5651fcf1275f064938d35
 
 interface Config {
   port: number;
@@ -54,7 +57,11 @@ function common_path(lhs: string, rhs: string) {
 function glob_script_files() {
   const results: string[] = [];
 
+<<<<<<< HEAD
   fs.globSync(`src/**/index.{ts,tsx,js,jsx}`)
+=======
+  fs.globSync(`{示例,src}/**/index.{ts,tsx,js,jsx}`)
+>>>>>>> 953e75dbee8f57836eb5651fcf1275f064938d35
     .filter(
       file => process.env.CI !== 'true' || !fs.readFileSync(path.join(import.meta.dirname, file)).includes('@no-ci'),
     )
@@ -82,10 +89,13 @@ const config: Config = {
   entries: glob_script_files().map(parse_entry),
 };
 
+<<<<<<< HEAD
 function is_truthy(value: unknown) {
   return value === true || value === 'true' || value === '1';
 }
 
+=======
+>>>>>>> 953e75dbee8f57836eb5651fcf1275f064938d35
 let io: Server;
 function watch_tavern_helper(compiler: webpack.Compiler) {
   if (compiler.options.watch) {
@@ -199,14 +209,22 @@ function parse_configuration(entry: Entry): (_env: any, argv: any) => webpack.Co
     experiments: {
       outputModule: true,
     },
+<<<<<<< HEAD
     devtool: argv.mode === 'production' ? false : 'eval-source-map',
+=======
+    devtool: argv.mode === 'production' ? 'source-map' : 'eval-source-map',
+>>>>>>> 953e75dbee8f57836eb5651fcf1275f064938d35
     watchOptions: {
       ignored: ['**/dist', '**/node_modules'],
     },
     entry: path.join(import.meta.dirname, entry.script),
     target: 'browserslist',
     output: {
+<<<<<<< HEAD
       devtoolNamespace: package_json.name ?? 'tavern_helper_template',
+=======
+      devtoolNamespace: 'tavern_helper_template',
+>>>>>>> 953e75dbee8f57836eb5651fcf1275f064938d35
       devtoolModuleFilenameTemplate: info => {
         const resource_path = decodeURIComponent(info.resourcePath.replace(/^\.\//, ''));
         const is_direct = info.allLoaders === '';
@@ -445,9 +463,14 @@ function parse_configuration(entry: Entry): (_env: any, argv: any) => webpack.Co
     )
       .concat(
         { apply: watch_tavern_helper },
+<<<<<<< HEAD
         ...(is_truthy(_env?.buildOnly) || is_truthy(process.env.TAVERN_HELPER_BUILD_ONLY)
           ? []
           : [{ apply: schema_dump }, { apply: tavern_sync }]),
+=======
+        { apply: schema_dump },
+        { apply: tavern_sync },
+>>>>>>> 953e75dbee8f57836eb5651fcf1275f064938d35
         new VueLoaderPlugin(),
         unpluginAutoImport({
           dts: true,
